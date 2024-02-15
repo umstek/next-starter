@@ -14,11 +14,11 @@ the intended use of NextJS 14.
 - [Drizzle ORM](https://orm.drizzle.team/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [React Aria](https://react-spectrum.adobe.com/react-aria/)
+- [Lucia Auth](https://lucia-auth.com/)
 
 ### Other libraries used
 
 - [Zod](https://zod.dev/)
-- [Oslo Auth Utilities](https://oslo.js.org/)
 
 ## Getting Started
 

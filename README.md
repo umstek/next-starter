@@ -3,9 +3,6 @@
 This is an opinionated [Next.js](https://nextjs.org/) template bootstrapped with
 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This tries to maintain a separation between API and Client side UI, which is not
-the intended use of NextJS 14.
-
 ## Stack
 
 - [NextJS](https://nextjs.org/) + [React](https://react.dev/)

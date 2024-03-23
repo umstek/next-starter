@@ -1,16 +1,17 @@
-import { cookies } from 'next/headers';
-import { redirect } from 'next/navigation';
+"use server";
 
-import { createSessionCookie, login } from '@/modules/auth';
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+
+import { createSessionCookie, login } from "@/modules/auth";
 
 export async function onSubmit(oldState: any, formData: FormData) {
-  'use server';
-  try {
-    const userId = await login(Object.fromEntries(formData));
-    const cookie = await createSessionCookie(userId);
-    cookies().set(cookie.name, cookie.value, cookie.attributes);
-  } catch (error: any) {
-    return { error: error.message };
-  }
-  return redirect('/'); // NextJs uses errors for redirects
+	try {
+		const userId = await login(Object.fromEntries(formData));
+		const cookie = await createSessionCookie(userId);
+		cookies().set(cookie.name, cookie.value, cookie.attributes);
+	} catch (error: any) {
+		return { error: error.message };
+	}
+	return redirect("/"); // NextJs uses errors for redirects
 }

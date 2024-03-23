@@ -37,6 +37,14 @@ export default function LoginForm() {
       <div className="flex justify-center">
         <Link
           className="text-blue-600 outline-none hover:border-b border-blue-600"
+          href="/api/auth/login/google"
+        >
+          Login with Google
+        </Link>
+      </div>
+      <div className="flex justify-center">
+        <Link
+          className="text-blue-600 outline-none hover:border-b border-blue-600"
           href="/register"
         >
           Register

@@ -6,13 +6,12 @@ export const userTable = pgTable('user', {
   id: text('id').primaryKey(),
   username: text('username').notNull().unique(),
   password: text('password').notNull().default(''),
+  googleId: text('google_id'),
 });
 
 // Use drizzle-zod to convert drizzle schema to zod schema.
 // If we retrieve a record from this table, it must adhere to the ts type
-export const userSchema = createInsertSchema(userTable).required({
-  password: true,
-});
+export const userSchema = createInsertSchema(userTable);
 
 export const createUserSchema = createInsertSchema(userTable, {
   password: (schema) => schema.password.min(6).max(255),

@@ -37,6 +37,14 @@ export default function RegisterForm() {
       <div className="flex justify-center">
         <Link
           className="text-blue-600 outline-none hover:border-b border-blue-600"
+          href="/api/auth/login/google"
+        >
+          Register with Google
+        </Link>
+      </div>
+      <div className="flex justify-center">
+        <Link
+          className="text-blue-600 outline-none hover:border-b border-blue-600"
           href="/login"
         >
           Login
